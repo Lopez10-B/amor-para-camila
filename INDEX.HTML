@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para Camila ❤️</title>
+
+    <meta name="description"
+        content="Un pequeño pedacito de mi corazón para ti, Camila.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #08080c;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: #ff477e;
+            color: white;
+        }
+
+        section {
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        /* CORAZONES */
+
+        .hearts {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: -50px;
+            color: #ff477e;
+            opacity: .7;
+            animation: subir linear infinite;
+        }
+
+        @keyframes subir {
+
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: .7;
+            }
+
+            85% {
+                opacity: .5;
+            }
+
+            100% {
+                transform:
+                    translateY(-110vh)
+                    rotate(360deg);
+                opacity: 0;
+            }
+
+        }
+
+
+        /* PORTADA */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 40px 20px;
+
+            background:
+                radial-gradient(
+                    circle at 50% 35%,
+                    rgba(255, 40, 100, .22),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    180deg,
+                    #160810 0%,
+                    #08080c 100%
+                );
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: aparecer 2s ease;
+        }
+
+        .small-title {
+            color: #ff7298;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+
+            font-size: clamp(55px, 12vw, 110px);
+
+            font-weight: normal;
+
+            font-style: italic;
+
+            line-height: .95;
+
+            margin-bottom: 25px;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #ffffff,
+                    #ff7da3,
+                    #ffffff
+                );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        .hero-subtitle {
+
+            font-size: clamp(19px, 4vw, 27px);
+
+            color: #ddd;
+
+            line-height: 1.7;
+
+            max-width: 650px;
+
+            margin: auto;
+        }
+
+        .hero-heart {
+
+            font-size: 65px;
+
+            display: block;
+
+            margin-bottom: 20px;
+
+            animation:
+                latido 1.5s infinite;
+        }
+
+        @keyframes latido {
+
+            0%,100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.18);
+            }
+
+        }
+
+        .scroll {
+
+            margin-top: 70px;
+
+            color: #aaa;
+
+            font-size: 13px;
+
+            letter-spacing: 3px;
+
+            animation: flotando 2s infinite;
+        }
+
+        @keyframes flotando {
+
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(8px);
+            }
+
+        }
+
+
+        /* SECCIONES */
+
+        .section {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            padding:
+                110px 25px;
+        }
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+
+            color: #ff5c8a;
+
+            font-size: 14px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+
+            font-size:
+                clamp(35px, 6vw, 55px);
+
+            font-weight: normal;
+
+            font-style: italic;
+
+            margin-top: 12px;
+        }
+
+
+        /* CARTA */
+
+        .letter {
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,.07),
+                    rgba(255,255,255,.02)
+                );
+
+            border:
+
+                1px solid
+                rgba(255,255,255,.1);
+
+            border-radius: 25px;
+
+            padding:
+                clamp(30px, 6vw, 65px);
+
+            box-shadow:
+                0 30px 80px
+                rgba(0,0,0,.4);
+
+            position: relative;
+        }
+
+        .letter::before {
+
+            content: "“";
+
+            position: absolute;
+
+            top: 10px;
+            left: 30px;
+
+            font-size: 100px;
+
+            color: rgba(255,70,120,.15);
+        }
+
+        .letter p {
+
+            font-size:
+                clamp(17px, 3vw, 20px);
+
+            line-height: 2;
+
+            color: #ddd;
+
+            margin-bottom: 22px;
+        }
+
+        .signature {
+
+            color: #ff7298 !important;
+
+            font-size: 25px !important;
+
+            font-style: italic;
+
+            text-align: right;
+        }
+
+
+        /* FRASE */
+
+        .quote {
+
+            padding:
+                100px 25px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #210914,
+                    #0d0b11
+                );
+        }
+
+        .quote p {
+
+            max-width: 800px;
+
+            margin: auto;
+
+            font-size:
+                clamp(28px, 6vw, 48px);
+
+            line-height: 1.35;
+
+            font-style: italic;
+
+            color: #f5dce4;
+        }
+
+        .quote span {
+
+            display: block;
+
+            margin-top: 30px;
+
+            color: #ff638f;
+
+            letter-spacing: 3px;
+
+            font-size: 13px;
+        }
+
+
+        /* GALERÍA */
+
+        .gallery {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 15px;
+        }
+
+        .photo {
+
+            height: 300px;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            background: #17171e;
+
+            position: relative;
+
+            border:
+                1px solid
+                rgba(255,255,255,.08);
+        }
+
+        .photo:first-child {
+
+            grid-row: span 2;
+
+            height: 615px;
+        }
+
+        .photo img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform .6s ease;
+        }
+
+        .photo:hover img {
+
+            transform: scale(1.07);
+        }
+
+        .photo::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    transparent 60%,
+                    rgba(0,0,0,.5)
+                );
+
+            pointer-events: none;
+        }
+
+
+        /* RAZONES */
+
+        .reasons {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .reason {
+
+            padding: 28px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,.04);
+
+            border:
+                1px solid
+                rgba(255,255,255,.08);
+
+            transition:
+                transform .3s ease,
+                background .3s ease;
+        }
+
+        .reason:hover {
+
+            transform:
+                translateY(-5px);
+
+            background:
+                rgba(255,70,120,.08);
+        }
+
+        .number {
+
+            width: 38px;
+            height: 38px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #ff477e;
+
+            margin-bottom: 17px;
+
+            font-family: Arial, sans-serif;
+
+            font-weight: bold;
+        }
+
+        .reason h3 {
+
+            font-size: 20px;
+
+            margin-bottom: 10px;
+        }
+
+        .reason p {
+
+            color: #aaa;
+
+            line-height: 1.7;
+        }
+
+
+        /* CONTADOR */
+
+        .counter-section {
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #08080c,
+                    #160811,
+                    #08080c
+                );
+        }
+
+        .counter {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            margin-top: 40px;
+        }
+
+        .time-box {
+
+            width: 130px;
+
+            padding: 25px 10px;
+
+            border-radius: 18px;
+
+            background:
+                rgba(255,255,255,.05);
+
+            border:
+                1px solid
+                rgba(255,255,255,.08);
+        }
+
+        .time-box strong {
+
+            display: block;
+
+            font-size: 35px;
+
+            color: #ff6a94;
+
+            font-family: Arial, sans-serif;
+        }
+
+        .time-box span {
+
+            color: #999;
+
+            font-size: 12px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* CANCIÓN */
+
+        .music-card {
+
+            max-width: 600px;
+
+            margin: auto;
+
+            padding: 35px;
+
+            border-radius: 25px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #21101a,
+                    #121218
+                );
+
+            border:
+                1px solid
+                rgba(255,255,255,.08);
+
+            text-align: center;
+        }
+
+        .music-icon {
+
+            font-size: 55px;
+
+            margin-bottom: 15px;
+        }
+
+        .music-card h3 {
+
+            font-size: 28px;
+
+            font-style: italic;
+
+            margin-bottom: 10px;
+        }
+
+        .music-card p {
+
+            color: #aaa;
+
+            margin-bottom: 25px;
+        }
+
+        audio {
+
+            width: 100%;
+        }
+
+
+        /* SORPRESA */
+
+        .surprise {
+
+            text-align: center;
+
+            padding:
+                120px 25px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255,55,105,.16),
+                    transparent 55%
+                );
+        }
+
+        .surprise-button {
+
+            border: none;
+
+            padding:
+                18px 35px;
+
+            border-radius: 50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff477e,
+                    #ff739c
+                );
+
+            color: white;
+
+            font-size: 17px;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 35px
+                rgba(255,71,126,.25);
+
+            transition:
+                transform .3s ease;
+        }
+
+        .surprise-button:hover {
+
+            transform:
+                scale(1.06);
+        }
+
+        #surpriseMessage {
+
+            display: none;
+
+            max-width: 700px;
+
+            margin:
+                45px auto 0;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            background:
+                rgba(255,255,255,.05);
+
+            border:
+                1px solid
+                rgba(255,255,255,.08);
+
+            animation:
+                aparecer 1s ease;
+        }
+
+        #surpriseMessage p {
+
+            font-size: 22px;
+
+            line-height: 1.8;
+
+            color: #f3dce3;
+        }
+
+
+        /* FINAL */
+
+        .final {
+
+            min-height: 90vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 50px 25px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #421025,
+                    #08080c 65%
+                );
+        }
+
+        .final-content {
+
+            max-width: 750px;
+        }
+
+        .final-heart {
+
+            font-size: 80px;
+
+            animation:
+                latido 1.5s infinite;
+        }
+
+        .final h2 {
+
+            font-size:
+                clamp(45px, 9vw, 85px);
+
+            font-weight: normal;
+
+            font-style: italic;
+
+            color: #ff7199;
+
+            margin:
+                25px 0;
+        }
+
+        .final p {
+
+            font-size: 21px;
+
+            line-height: 1.8;
+
+            color: #ddd;
+        }
+
+        .from {
+
+            margin-top: 45px;
+
+            font-size: 18px !important;
+
+            color: #ff7199 !important;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+
+            text-align: center;
+
+            padding: 30px;
+
+            background: #050509;
+
+            color: #666;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* ANIMACIONES */
+
+        @keyframes aparecer {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(25px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+
+        }
+
+
+        /* CELULARES */
+
+        @media (max-width: 650px) {
+
+            .gallery {
+
+                grid-template-columns: 1fr;
+            }
+
+            .photo,
+            .photo:first-child {
+
+                height: 350px;
+
+                grid-row: auto;
+            }
+
+            .reasons {
+
+                grid-template-columns: 1fr;
+            }
+
+            .time-box {
+
+                width: 105px;
+            }
+
+            .time-box strong {
+
+                font-size: 28px;
+            }
+
+            .letter {
+
+                padding: 28px 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- CORAZONES -->
+
+    <div class="hearts" id="hearts"></div>
+
+
+    <!-- PORTADA -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                Amor & Amistad
+            </div>
+
+            <div class="hero-heart">
+                ❤️
+            </div>
+
+            <h1>
+                Camila
+            </h1>
+
+            <p class="hero-subtitle">
+
+                Hay personas que llegan a nuestra vida...
+                y terminan convirtiéndose en una parte
+                de nuestro corazón.
+
+            </p>
+
+            <div class="scroll">
+                ↓ &nbsp; BAJA DESPACIO &nbsp; ↓
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CARTA -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <span>
+                Para ti
+            </span>
+
+            <h2>
+                Mi amor ❤️
+            </h2>
+
+        </div>
+
+
+        <div class="letter">
+
+            <p>
+                Mi amor,
+            </p>
+
+            <p>
+                Hoy quería hacer algo diferente para ti.
+                Algo que no fuera simplemente un regalo,
+                sino un pequeño pedacito de todo lo que
+                llevo dentro de mi corazón.
+            </p>
+
+            <p>
+                Desde que llegaste a mi vida, has hecho
+                que muchos momentos sean más bonitos.
+                Tu sonrisa, tu forma de ser, tus detalles
+                y hasta esas pequeñas cosas que quizá tú
+                no notas, significan muchísimo para mí.
+            </p>
+
+            <p>
+                Gracias por cada momento compartido,
+                por cada abrazo, cada conversación,
+                cada risa y también por estar ahí en
+                aquellos días que no han sido tan fáciles.
+            </p>
+
+            <p>
+                No quiero prometerte una vida perfecta,
+                porque sé que nadie puede hacerlo.
+                Pero sí quiero seguir construyendo contigo
+                momentos que algún día podamos recordar
+                con una sonrisa.
+            </p>
+
+            <p>
+                Quiero seguir conociéndote, seguir
+                sorprendiéndote, seguir riéndome contigo
+                y seguir siendo esa persona que pueda
+                estar a tu lado.
+            </p>
+
+            <p>
+                Espero que cuando leas esto sonrías,
+                porque detrás de cada palabra hay alguien
+                que te quiere muchísimo.
+            </p>
+
+            <p>
+                Te Amo full, Mi Amor. ❤️
+            </p>
+
+            <p class="signature">
+                Con todo mi corazón,<br>
+                Brayan ❤️
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FRASE -->
+
+    <section class="quote">
+
+        <p>
+            “De todas las casualidades bonitas
+            que pudo regalarme la vida,
+            encontrarte a ti ha sido una de mis favoritas.”
+        </p>
+
+        <span>
+            PARA TI, CAMILA ❤️
+        </span>
+
+    </section>
+
+
+
+    <!-- FOTOS -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <span>
+                Nuestros recuerdos
+            </span>
+
+            <h2>
+                Momentos que quiero guardar 📸
+            </h2>
+
+        </div>
+
+
+        <div class="gallery">
+
+
+            <div class="photo">
+
+                <img
+                    src="fotos/foto1.jpeg"
+                    alt="Nuestro recuerdo">
+
+            </div>
+
+
+            <div class="photo">
+
+                <img
+                    src="fotos/foto2.jpeg"
+                    alt="Nuestro recuerdo">
+
+            </div>
+
+
+            <div class="photo">
+
+                <img
+                    src="fotos/foto3.jpeg"
+                    alt="Nuestro recuerdo">
+
+            </div>
+
+
+            <div class="photo">
+
+                <img
+                    src="fotos/foto4.jpeg"
+                    alt="Nuestro recuerdo">
+
+            </div>
+
+
+            <div class="photo">
+
+                <img
+                    src="fotos/foto5.jpeg"
+                    alt="Nuestro recuerdo">
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- RAZONES -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <span>
+                Solo algunas
+            </span>
+
+            <h2>
+                10 cosas que amo de ti 💕
+            </h2>
+
+        </div>
+
+
+        <div class="reasons">
+
+
+            <div class="reason">
+
+                <div class="number">1</div>
+
+                <h3>
+                    Tu sonrisa
+                </h3>
+
+                <p>
+                    Porque tiene una manera muy especial
+                    de alegrarme incluso en los días difíciles.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <div class="number">2</div>
+
+                <h3>
+                    Tu forma de ser
+                </h3>
+
+                <p>
+                    Porque eres tú, con todo lo bonito
+                    que te hace única.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <div class="number">3</div>
+
+                <h3>
+                    Tu mirada
+                </h3>
+
+                <p>
+                    Porque hay momentos en los que no
+                    necesitas decir absolutamente nada.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <div class="number">4</div>
+
+                <h3>
+                    Tu ternura
+                </h3>
+
+                <p>
+                    Esos pequeños detalles tuyos que hacen
+                    que te ame todavía más.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <div class="number">5</div>
+
+                <h3>
+                    Tus ocurrencias
+                </h3>
+
+                <p>
+                    Porque contigo siempre hay espacio
+                    para una sonrisa inesperada.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <div class="number">6</div>
+
+                <h3>
+                    Cómo me haces sentir
+                </h3>
+
+                <p>
+                    Porque contigo puedo sentir que
+                    estoy compartiendo algo realmente especial.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <div class="number">7</div>
+
+                <h3>
+                    Tu corazón
+                </h3>
+
+                <p>
+                    Porque detrás de tu manera de ser
+                    hay una persona que amo muchísimo.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <div class="number">8</div>
+
+                <h3>
+                    Nuestros momentos
+                </h3>
+
+                <p>
+                    Porque cada recuerdo contigo tiene
+                    un lugar especial en mi memoria.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <div class="number">9</div>
+
+                <h3>
+                    Tu compañía
+                </h3>
+
+                <p>
+                    Porque hasta los momentos más sencillos
+                    se sienten diferentes cuando estoy contigo.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <div class="number">10</div>
+
+                <h3>
+                    Simplemente tú
+                </h3>
+
+                <p>
+                    Porque no necesito una lista para
+                    explicar por qué te quiero.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTADOR -->
+
+    <section class="section counter-section">
+
+        <div class="section-title">
+
+            <span>
+                Y seguimos contando...
+            </span>
+
+            <h2>
+                Nuestro tiempo ❤️
+            </h2>
+
+        </div>
+
+
+        <p style="text-align:center;color:#aaa;">
+
+            Desde el día que comenzó nuestra historia...
+
+        </p>
+
+
+        <div class="counter">
+
+
+            <div class="time-box">
+
+                <strong id="days">
+                    0
+                </strong>
+
+                <span>
+                    Días
+                </span>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <strong id="hours">
+                    0
+                </strong>
+
+                <span>
+                    Horas
+                </span>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <strong id="minutes">
+                    0
+                </strong>
+
+                <span>
+                    Minutos
+                </span>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <strong id="seconds">
+                    0
+                </strong>
+
+                <span>
+                    Segundos
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CANCIÓN -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <span>
+                Dale play
+            </span>
+
+            <h2>
+                Nuestra canción 🎵
+            </h2>
+
+        </div>
+
+
+        <div class="music-card">
+
+            <div class="music-icon">
+                🎧
+            </div>
+
+            <h3>
+                Una canción para nosotros
+            </h3>
+
+            <p>
+                Porque hay canciones que después de
+                conocer a alguien especial ya nunca
+                vuelven a sonar igual.
+            </p>
+
+
+            <audio controls>
+
+                <source
+                    src="musica/Diez Razones Para Amarte, El Gran Martín Elías, Video Letra - Sentir Vallenato.mp3"
+                    type="audio/mpeg">
+
+                Tu navegador no puede reproducir audio.
+
+            </audio>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SORPRESA -->
+
+    <section class="surprise">
+
+        <div class="section-title">
+
+            <span>
+                Antes de terminar...
+            </span>
+
+            <h2>
+                Tengo algo para ti 🎁
+            </h2>
+
+        </div>
+
+
+        <button
+            class="surprise-button"
+            onclick="mostrarSorpresa()">
+
+            No pulses aquí... 👀❤️
+
+        </button>
+
+
+        <div id="surpriseMessage">
+
+            <p>
+
+                Camila...
+
+                <br><br>
+
+                Si llegaste hasta aquí quiero que sepas
+                algo muy sencillo:
+
+                <br><br>
+
+                No hice esta página porque quisiera
+                hacer el regalo más grande.
+
+                <br><br>
+
+                La hice porque quería que tuvieras
+                algo que pudieras guardar.
+
+                <br><br>
+
+                Algo que cuando vuelvas a abrirlo,
+                te recuerde que existe alguien que
+                piensa en ti, que te quiere y que
+                agradece muchísimo haberte encontrado.
+
+                <br><br>
+
+                ❤️
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FINAL -->
+
+    <section class="final">
+
+        <div class="final-content">
+
+            <div class="final-heart">
+                ❤️
+            </div>
+
+            <h2>
+                Te Amo, Mi Negrita Hermosa
+            </h2>
+
+            <p>
+
+                Gracias por formar parte de mi vida.
+
+                <br>
+
+                Espero que este pequeño detalle
+                te haya sacado una sonrisa.
+
+                <br><br>
+
+                Y recuerda...
+
+                <br>
+
+                Esto no es el final de nuestra historia.
+
+                <br>
+
+                Es solamente otra página
+                de todo lo que todavía nos queda por vivir.
+
+            </p>
+
+            <p class="from">
+
+                Con amor,
+
+                <br><br>
+
+                BRAYAN, TU GRAN AMOR❤️
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <footer>
+
+        Hecho especialmente para Camila ❤️
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+
+        /* CORAZONES */
+
+        const hearts =
+            document.getElementById("hearts");
+
+
+        function crearCorazon() {
+
+            const heart =
+                document.createElement("div");
+
+            heart.classList.add("heart");
+
+            heart.innerHTML =
+                Math.random() > .5
+                ? "❤"
+                : "♡";
+
+            heart.style.left =
+                Math.random() * 100 + "%";
+
+            heart.style.fontSize =
+                (12 + Math.random() * 22) + "px";
+
+            heart.style.animationDuration =
+                (7 + Math.random() * 8) + "s";
+
+            hearts.appendChild(heart);
+
+
+            setTimeout(() => {
+
+                heart.remove();
+
+            }, 15000);
+
+        }
+
+
+        setInterval(crearCorazon, 700);
+
+
+
+        /* SORPRESA */
+
+        function mostrarSorpresa() {
+
+            const mensaje =
+                document.getElementById(
+                    "surpriseMessage"
+                );
+
+            mensaje.style.display =
+                "block";
+
+            mensaje.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        }
+
+
+
+        /* =====================================================
+           CONTADOR
+
+           FECHA REAL:
+           4 DE ABRIL DE 2026
+
+           IMPORTANTE:
+           EN JAVASCRIPT LOS MESES COMIENZAN EN 0.
+
+           3 = ABRIL
+        ====================================================== */
+
+        const fechaInicio =
+            new Date(2026, 3, 4);
+
+
+        function actualizarContador() {
+
+            const ahora =
+                new Date();
+
+            const diferencia =
+                ahora - fechaInicio;
+
+
+            if (diferencia < 0) {
+
+                document.getElementById(
+                    "days"
+                ).textContent = "0";
+
+                document.getElementById(
+                    "hours"
+                ).textContent = "00";
+
+                document.getElementById(
+                    "minutes"
+                ).textContent = "00";
+
+                document.getElementById(
+                    "seconds"
+                ).textContent = "00";
+
+                return;
+            }
+
+
+            const segundosTotales =
+                Math.floor(
+                    diferencia / 1000
+                );
+
+
+            const dias =
+                Math.floor(
+                    segundosTotales /
+                    86400
+                );
+
+
+            const horas =
+                Math.floor(
+                    (segundosTotales %
+                    86400) / 3600
+                );
+
+
+            const minutos =
+                Math.floor(
+                    (segundosTotales %
+                    3600) / 60
+                );
+
+
+            const segundos =
+                segundosTotales % 60;
+
+
+            document.getElementById(
+                "days"
+            ).textContent =
+                dias;
+
+
+            document.getElementById(
+                "hours"
+            ).textContent =
+                String(horas).padStart(
+                    2, "0"
+                );
+
+
+            document.getElementById(
+                "minutes"
+            ).textContent =
+                String(minutos).padStart(
+                    2, "0"
+                );
+
+
+            document.getElementById(
+                "seconds"
+            ).textContent =
+                String(segundos).padStart(
+                    2, "0"
+                );
+
+        }
+
+
+        actualizarContador();
+
+
+        setInterval(
+            actualizarContador,
+            1000
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
